@@ -1,0 +1,1 @@
+export default function Contact(){return <main className="mx-auto max-w-3xl p-6"><h1 className="text-3xl font-bold">Contact</h1><p className="mt-4">For questions, email: allnewsreacttv@gmail.com</p></main>}
