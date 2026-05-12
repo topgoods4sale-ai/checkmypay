@@ -1,0 +1,1 @@
+export default function Privacy(){return <main className="mx-auto max-w-3xl p-6"><h1 className="text-3xl font-bold">Privacy Policy</h1><p className="mt-4">CheckMyPay does not require an account. Calculator inputs are processed in your browser. If ads or analytics are added, third-party services may use cookies according to their own policies.</p></main>}
