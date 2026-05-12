@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Virginia Paycheck Calculator | CheckMyPay</title>
+  <meta name="description" content="Free Virginia paycheck calculator for hourly, salary, overtime, federal tax, Virginia state tax, Social Security, Medicare, and estimated take-home pay." />
+  <link rel="canonical" href="https://checkmypay.vercel.app/" />
+  <meta property="og:title" content="Virginia Paycheck Calculator | CheckMyPay" />
+  <meta property="og:description" content="Estimate your Virginia take-home pay fast with hourly, salary, overtime, and deduction inputs." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CheckMyPay Virginia Paycheck Calculator","applicationCategory":"FinanceApplication","operatingSystem":"All","description":"Free Virginia paycheck calculator for take-home pay estimates."}</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav"><a class="logo" href="/">CheckMyPay</a><nav><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></nav></div>
+  </header>
+  <main>
+    <section class="hero container">
+      <div>
+        <p class="eyebrow">Free Virginia Paycheck Calculator</p>
+        <h1>Virginia Paycheck Calculator</h1>
+        <p class="lead">Estimate hourly, salary, overtime, federal tax, Virginia state tax, Social Security, Medicare, deductions, and take-home pay.</p>
+      </div>
+      <div class="ad-box">Google AdSense Header Ad Placeholder</div>
+    </section>
+    <section class="container grid">
+      <form id="paycheckForm" class="card calculator">
+        <h2>Calculate Your Take-Home Pay</h2>
+        <label>Pay type<select id="payType"><option value="hourly">Hourly</option><option value="salary">Salary</option></select></label>
+        <label id="hourlyWrap">Hourly rate<input id="hourlyRate" type="number" inputmode="decimal" value="20" min="0" step="0.01" /></label>
+        <label id="salaryWrap" class="hidden">Annual salary<input id="salary" type="number" inputmode="decimal" value="50000" min="0" step="100" /></label>
+        <label id="hoursWrap">Hours per week<input id="hours" type="number" inputmode="decimal" value="40" min="0" step="0.5" /></label>
+        <label id="overtimeWrap">Overtime hours per week<input id="overtime" type="number" inputmode="decimal" value="0" min="0" step="0.5" /></label>
+        <label>Pay frequency<select id="frequency"><option value="52">Weekly</option><option value="26" selected>Biweekly</option><option value="24">Semi-monthly</option><option value="12">Monthly</option></select></label>
+        <label>Filing status<select id="filing"><option value="single">Single</option><option value="married">Married filing jointly</option><option value="head">Head of household</option></select></label>
+        <label>Pre-tax deductions per paycheck<input id="pretax" type="number" inputmode="decimal" value="0" min="0" step="1" /></label>
+        <label>Post-tax deductions per paycheck<input id="posttax" type="number" inputmode="decimal" value="0" min="0" step="1" /></label>
+        <button type="submit">Calculate Paycheck</button>
+        <p class="small">Estimate only. Tax rules and payroll withholding can change.</p>
+      </form>
+      <aside class="card results">
+        <h2>Estimated Results</h2>
+        <div class="result big"><span>Net paycheck</span><strong id="netPay">$0</strong></div>
+        <div class="result"><span>Gross per paycheck</span><strong id="grossPay">$0</strong></div>
+        <div class="result"><span>Federal tax</span><strong id="fedTax">$0</strong></div>
+        <div class="result"><span>Virginia state tax</span><strong id="stateTax">$0</strong></div>
+        <div class="result"><span>Social Security</span><strong id="ssTax">$0</strong></div>
+        <div class="result"><span>Medicare</span><strong id="medTax">$0</strong></div>
+        <div class="result"><span>Annual take-home</span><strong id="annualNet">$0</strong></div>
+        <div class="ad-box side">Google AdSense Sidebar Ad Placeholder</div>
+      </aside>
+    </section>
+    <section class="container content">
+      <div class="ad-box">Google AdSense In-Content Ad Placeholder</div>
+      <h2>How the Virginia Paycheck Calculator Works</h2>
+      <p>CheckMyPay estimates your take-home pay by starting with your gross wages, subtracting estimated pre-tax deductions, federal income tax, Virginia state income tax, Social Security, Medicare, and post-tax deductions.</p>
+      <h2>Virginia Paycheck Calculator for Hourly and Salary Workers</h2>
+      <p>Use this calculator for hourly jobs, salary jobs, weekly checks, biweekly checks, monthly checks, overtime estimates, and paycheck deduction estimates in Virginia.</p>
+      <h2>Important Disclaimer</h2>
+      <p>This tool is for educational estimates only and is not tax, legal, payroll, or financial advice. Your employer, tax professional, or payroll provider may calculate withholding differently.</p>
+    </section>
+  </main>
+  <footer class="container footer"><p>© <span id="year"></span> CheckMyPay</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
